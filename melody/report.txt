@@ -1,0 +1,10 @@
+Task 1
+- all the sounds have the same melody, and that can be seen in chromagram visualization in pictures tone0.png, tone1.png and tone2.png (red, or in some cases lime green, being the tone that is played)
+- however, those three sounds don't have the same "color"
+- that is because they are not played/synthesized on the same instruments
+- sounds tone1 and tone2 sound more similar than tone0
+
+Task 2
+- after process of template matching finished, I got result that is shown in photo key.png
+- the key that was calculated is C major, and looking at the note histogram below it doesn't really match
+- looking at the histogram, notes C# and G# are common, but they are not in C major scale

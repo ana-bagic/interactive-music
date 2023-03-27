@@ -1,0 +1,13 @@
+Task 1
+- files task1.sv and task1-audio.wav are my results of the first task
+- I annotated all snare, kick and hi-hat sounds
+
+Task 2
+- files task2.sv and up202211651_my_tap_example1.txt are my beat tapping results
+- it sounds pretty "correct" to me
+
+Task 3
+- files task3a.sv, task3b.sv, trackA.txt and trackB.txt are my beat tapping results
+
+Task 4
+- using autoMashup.pd I combined two tracks and got decent result on some of the compatibilities
