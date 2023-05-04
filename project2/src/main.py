@@ -3,16 +3,14 @@ import random
 from midiStringConverter import string_to_midi, midi_to_string
 from markov import Markov
 
-midi_file1 = 'river-flows-in-you'
-midi_file2 = 'kiss-the-rain'
-sequence_length = 6
-output_length = 900
-change_rate = 0.1
+midi_files = ['time', 'kiss-the-rain', 'river-flows-in-you', 'pirate']
+sequence_length = 3
+output_length = 3000
+change_rate = 0.01
 
-midi_string1 = midi_to_string('base-midi/' + midi_file1 + '.mid')
-midi_string2 = midi_to_string('base-midi/' + midi_file2 + '.mid')
+midi_strings = [midi_to_string('base-midi/' + midi + '.mid') for midi in midi_files]
 
-markovs = [Markov(midi_string1, sequence_length), Markov(midi_string2, sequence_length)]
+markovs = [Markov(midi, sequence_length) for midi in midi_strings]
 composition = []
 current_markov = random.choice(markovs)
 current_markov.start_composition(composition)
@@ -22,6 +20,8 @@ while len(composition) < output_length:
         current_markov = random.choice(markovs)
     current_markov.make_step(composition)
 
-final_string = ' '.join([' '.join(i) for i in composition])
+final_string = ' '.join(composition[0])
+for i in composition[1:]:
+    final_string += ' ' + i[-1]
 generated_midi = string_to_midi(final_string)
 generated_midi.write('midi', 'generated-midi/generated.mid')
