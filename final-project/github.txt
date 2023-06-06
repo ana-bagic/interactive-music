@@ -1,0 +1,5 @@
+All files including source files for this project, MIDI files, report and video can be found on my github page on this link:
+
+https://github.com/ana-bagic/interactive-music
+
+in the folder "final-project".
