@@ -1,0 +1,11 @@
+Final project report
+
+For this project in interactive music assignment I decided to combine knowledge in generative music (specifically, use of Markov chains in this context) and interactive music (specifically, changing the music based on the facial emotion recognition).
+
+To help me with the facial recognition aspect of the project, I used Python library called FER (Facial emotion recognition). Using a few MIDI files of existing compositions/songs, I created Markov chains. Then, based on the emotion currently recognised, appropriate Markov chains were used. Although FER could detect 7 different emotions (happy, sad, angry, neutral, fear, disgust and surprise), I limited my project to the first 4 (happy, sad, angry and neutral) because they were the most common to detect and also to represent with music.
+
+The most challenging part of the project was to create a decent pipeline to play the music in real time. Because the output MIDI has to be constantly created on the spot, I couldn't preconstruct it and then just play it. But, I also couldn't create one note and then play it, and then create another and play the second one, and continue like that, because of the Python limits with streaming music in realtime. Because of that, I had to settle on mini batches of MIDI tracks, and construct them whole before playing them, but still have them small enough where I don't have to contruct a whole long composition.
+
+However, the part that I'm not very happy with is that the music doesn't seamlessly change, but there is a small pause while changing. That is because Python pygame API for playing the music in realtime doesn't allow for music to change without the pause. It has to play one 'track' after the other without the option to play it like a stream which would allow dynamic adding to it. Also, even though I was advised to transcribe all the songs to the same key, it made more sense to keep them in their original key as it keeps their original 'vibe' which is especially important for the 'happy' and 'sad' songs.
+
+Video of the demo can be found in this folder.
