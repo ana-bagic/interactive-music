@@ -8,4 +8,4 @@ The most challenging part of the project was to create a decent pipeline to play
 
 However, the part that I'm not very happy with is that the music doesn't seamlessly change, but there is a small pause while changing. That is because Python pygame API for playing the music in realtime doesn't allow for music to change without the pause. It has to play one 'track' after the other without the option to play it like a stream which would allow dynamic adding to it. Also, even though I was advised to transcribe all the songs to the same key, it made more sense to keep them in their original key as it keeps their original 'vibe' which is especially important for the 'happy' and 'sad' songs.
 
-Video of the demo can be found in this folder.
+Video of the demo can be found in this folder. I couldn't get it to record a window that shows my face as well, but it will be shown in class.
